@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head>
+    <title>WebRTC Video Conference Tutorial - Plain WebRTC</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+    <style>
+        video {
+            max-width:33%;
+        }
+    </style>
+</head>
+<body>
+    <h1>WebRTC Video Conference Tutorial - Plain WebRTC</h1>
+
+    <div id="selectRoom">
+        <label>Type the room number</label>
+        <input id="roomNumber" type="text" />
+        <button id="goRoom">Go</button>
+    </div>
+
+    <div id="rooms">
+    </div>    
+
+    <div id="consultingRoom" style="display:none">
+        <video id="localVideo" autoplay></video>
+        <video id="remoteVideo" autoplay></video>
+        <video id="remoteVideo2" autoplay></video>
+    </div>
+
+    <div id="chatroom" style="display:none">
+
+    </div> 
+
+    <section id="input_zone" style="display:none"> 
+      <input id="message" class="vertical-align" type="text" />
+      <button id="send_message" class="vertical-align" type="button">Send</button>
+    </section>   
+
+    <!--<script src="/socket.io/socket.io.js"></script>-->
+    <!--<script src="http://code.jquery.com/jquery-latest.min.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="client.js"></script>
+</body>
